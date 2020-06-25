@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 61.4px;
+    background: #757588;
+}
+
+#container {
+    width: 980px;
+    height: 550px;
+    display: grid;
+    margin: 0 auto;
+    background-color: darkslategray;
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    text-shadow: 3px 3px 2.4px #e626cf;
+    font-size: 45px;
+    font-style: oblique;
+    font-family: monospace;
+}
+
+.inner {
+    position: relative;
+    margin: 0 auto;
+}
+
+.clock {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #484a9278 url(clock.png);
+    background-size: contain;
+    border: 20px solid 13px #1b1919;
+    boder-radious: 13px;
+    box-shadow: inset 0 0 30px rgba(4, 4, 4, 1), 0 20px 20px rgba(5, 6, 26, 1), 0 0 0 25px rgba(199, 179, 179, 0.89);
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #848484;
+    boder: 2px solid #fff;
+    z-index: 100000;
+    border-radius: 50%;
+}
+
+.hour,
+.min,
+.sec {
+    position: absolute;
+}
+
+.hour,
+.hr {
+    width: 160px;
+    height: 160px;
+}
+
+.min,
+.mn {
+    width: 190px;
+    height: 190px;
+}
+
+.sec,
+.sc {
+    width: 230px;
+    height: 230px;
+}
+
+.hr,
+.mn,
+.sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #848484;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 120px;
+    background: #3e242f;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #f10b0b;
+    z-index: 14;
+    border-radius: 6px 6px 0 0;
+}
+
+.footer {
+    color: #f4f0f0;
+    background-color: black;
+    display: grid;
+    float: left;
+    margin-left: 27px;
+    margin-right: 27px;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 16px;
+    width: 150px;
+    height: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+footer {
+    width: 980px;
+    display: block;
+    margin: 0 auto;
+}
+
+#footer {
+    text-align: center;
+    color: floralwhite;
+    padding: 10px;
+    background-color: #0a080abd;
+}

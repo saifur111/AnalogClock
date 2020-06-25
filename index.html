@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Analog Clock</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Analog Clock</h1>
+        <div class="inner">
+            <div class="clock">
+                <div class="hour">
+                    <div class="hr" id="hr">
+
+                    </div>
+                </div>
+                <div class="min">
+                    <div class="mn" id="mn">
+
+                    </div>
+                </div>
+                <div class="sec">
+                    <div class="sc" id="sc">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <p>&copy;2020 Copyright:Develop by Md Saifur Rahman.</p>
+        </div>
+    </footer>
+    <script>
+        const deg = 6;
+        const hr = document.querySelector("#hr");
+        const mn = document.querySelector("#mn");
+        const sc = document.querySelector("#sc");
+        setInterval(() => {
+            let d = new Date();
+            let hh = d.getHours() * 30;
+            let mm = d.getMinutes() * deg;
+            let sce = d.getSeconds() * deg;
+            hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+            mn.style.transform = `rotateZ(${mm}deg)`;
+            sc.style.transform = `rotateZ(${sce}deg)`;
+        })
+    </script>
+</body>
+
+</html>
